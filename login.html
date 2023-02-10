@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登入</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/account.css">
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script src="/js/vue.js"></script>
+</head>
+
+<body>
+    <!-- headers -->
+    <div class="headers">
+        <div class="container d-flex align-items-center justify-content-between">
+            <div class="logo">
+                <a href="index.html"><span class="iconify" data-icon="cib:apple" data-inline="false"></span></a>
+            </div>
+            <div class="menu">
+                <div><a href="index.html">Mac</a></div>
+                <div><a href="index.html">iPad</a></div>
+                <div><a href="index.html" class="active">iPhone</a></div>
+                <div><a href="index.html">Watch</a></div>
+                <div><a href="index.html">TV</a></div>
+                <div><a href="index.html">Music</a></div>
+                <div><a href="index.html">支援服務</a></div>
+            </div>
+            <div class="logo">
+                <span class="iconify" data-icon="ant-design:search-outlined" data-inline="false"></span>
+            </div>
+            <div class="logo">
+                <span class="iconify" data-icon="bi:bag" data-inline="false"></span>
+            </div>
+            <div class="logo">
+                <a href="login.html"><span class="iconify" data-icon="line-md:account" data-inline="false"></span></a>c
+            </div>
+        </div>
+    </div>
+
+    <!-- 會員登入 -->
+    <div class=" container mt-5" id="login-app">
+        <h1 class="h1 mb-4">登入。</h1>
+        <div class="form-group">
+            <!-- <label for="account"></label> -->
+            <input type="text" class="iphone-input form-control" placeholder="Apple ID" id="account"
+                v-model="form.account" />
+        </div>
+        <div class="form-group">
+            <label for="password"></label>
+            <input type="password" class="iphone-input form-control" placeholder="密碼" id="password"
+                v-model="form.password" />
+        </div>
+        <div class="apple-id">
+            你的 Apple ID 是你用來登入 iTunes、App Store 與 iCloud 的電子郵件地址。
+        </div>
+        <div>
+            <button class="btn btn-primary account" @click="doLogin">登入</button>
+            <!-- <a href="#"class="btn btn-primary account" @click.prevent="doLogin" >登入</a> -->
+            <!-- @click.prevent可以終止元素的初始作用，這邊範例是用來終止<a>連結的錨點 -->
+        </div>
+        <div class="container d-flex  justify-content-start  flex-column mt-3 mb-5">
+            <div>
+                <a href="#" class="iphone-normal-btn">已忘記你的 Apple ID 或密碼？</a>
+            </div>
+            <div>
+                <a href="#" class="iphone-normal-btn ">沒有 Apple ID？立即建立新 ID。</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="container d-flex justify-content-start" id="footer-header">
+        <div class="logo mr-3">
+            <span class="iconify" data-icon="cib:apple" data-inline="false"></span>
+        </div>
+
+        <div class=" mr-3">
+            <span class="iconify" data-icon="ant-design:right-outlined" data-inline="false"></span>
+        </div>
+        <div class=" mr-3">iPhone</div>
+        <div class=" mr-3">
+            <span class="iconify" data-icon="ant-design:right-outlined" data-inline="false"></span>
+        </div>
+        <div class="mr-3">登入</div>
+    </div>
+    <div class="footer mt-3">
+        <div class="container d-flex ">
+            <div class="d-flex justify-content-start align-items-start flex-column w-100">
+                <div class="links-title">選擇與了解產品</div>
+                <div class="links d-flex justify-content-center align-items-start flex-column">
+                    <a href="#">Mac</a>
+                    <a href="#">iPad</a>
+                    <a href="#">iPhone</a>
+                    <a href="#">Watch</a>
+                    <a href="#">TV</a>
+                    <a href="#">Music</a>
+                    <a href="#">AirPods</a>
+                    <a href="#">HomePod</a>
+                    <a href="#">iPod touch</a>
+                    <a href="#">配件</a>
+                    <a href="#">禮品卡</a>
+                </div>
+            </div>
+            <div class="d-flex justify-content-start align-items-start flex-column w-100">
+                <div class="links-title">服務</div>
+                <div class="links d-flex justify-content-center align-items-start flex-column">
+                    <a href="#">Apple Music</a>
+                    <a href="#">Apple TV+</a>
+                    <a href="#">Apple Arcade</a>
+                    <a href="#">iCloud</a>
+                    <a href="#">Apple One</a>
+                    <a href="#">Apple Pay</a>
+                    <a href="#">Apple Books</a>
+                </div>
+
+                <div class="links-title mt-5">帳戶</div>
+                <div class="links d-flex justify-content-center align-items-start flex-column">
+                    <a href="#">管理你的 Apple ID</a>
+                    <a href="#">Apple Store 帳戶</a>
+                    <a href="#">iCloud.com</a>
+                </div>
+            </div>
+            <div class="d-flex justify-content-start align-items-start flex-column w-100">
+                <div class="links-title">Apple Store</div>
+                <div class="links d-flex justify-content-center align-items-start flex-column">
+                    <a href="#">尋找直營店</a>
+                    <a href="#">網上選購</a>
+                    <a href="#">Genius Bar 天才吧</a>
+                    <a href="#">Today at Apple</a>
+                    <a href="#">Apple 夏令營</a>
+                    <a href="#">Apple Store App</a>
+                    <a href="#">整修品與清倉品</a>
+                    <a href="#">信用卡分期付款</a>
+                    <a href="#">Apple Trade In 換購方案</a>
+                    <a href="#">訂單狀態</a>
+                    <a href="#">購物協助</a>
+                </div>
+            </div>
+            <div class="d-flex justify-content-start align-items-start flex-column w-100">
+                <div class="links-title">商務應用</div>
+                <div class="links d-flex justify-content-center align-items-start flex-column">
+                    <a href="#">Apple 與商務</a>
+                    <a href="#">商務選購</a>
+                </div>
+
+                <div class="links-title mt-5">教育應用</div>
+                <div class="links d-flex justify-content-center align-items-start flex-column">
+                    <a href="#">Apple 與教育</a>
+                    <a href="#">大專校院師生選購</a>
+                </div>
+            </div>
+            <div class="d-flex justify-content-start align-items-start flex-column w-100">
+                <div class="links-title">Apple 價值理念</div>
+                <div class="links d-flex justify-content-center align-items-start flex-column">
+                    <a href="#">輔助使用</a>
+                    <a href="#">環境</a>
+                    <a href="#">隱私權</a>
+                    <a href="#">供應商責任</a>
+                </div>
+
+                <div class="links-title mt-5">關於 Apple</div>
+                <div class="links d-flex justify-content-center align-items-start flex-column">
+                    <a href="#">Newsroom</a>
+                    <a href="#">Apple 領導團隊</a>
+                    <a href="#">工作機會</a>
+                    <a href="#">活動</a>
+                    <a href="#">聯絡 Apple</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="/js/login.js"></script>
+
+</html>
